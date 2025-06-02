@@ -1,3 +1,3 @@
 # Javascript-Training
 
-Readme
+Atomic design
