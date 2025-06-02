@@ -41,7 +41,11 @@ Twelve-Factor App :-
 
     The Tweleve-Factor App is a methodology designed to guide the development of software-as-a-service (SaaS) applications, particularly intended for deployment of modern cloud platforms.
 
-    The 12 factors are  
-
-
+    The 12 factors are :- 
+    1. Codebase :- Maintain a single codebase tracked in version control, with many deploys. This ensures consistency accross different deployment environments.
+    2. Dependencies :- Explicitly declare and isolate dependencies. 
+    3. Configuration :- Store configuration in the environment. This practice allows for easy adaptation of the application to different environments without modifying the codebase.
+    4. Backing Services :- Treat backing services such as databses, queues and caches as attached resources.
+    5. Build, Release, Run :- Strictly separate te build, release and the run stages. This separation ensures a clear and reproducible deployment process.
+    6. Processes :- Execute the application as one or more stateless processes. Any persistent data should be stored in backing services, not in the 
 
