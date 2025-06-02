@@ -50,5 +50,8 @@ Twelve-Factor App :-
     6. Processes :- Execute the application as one or more stateless processes. Any persistent data should be stored in backing services, not in the application itself.
     7. Port Binding :- The application should be self-contained and expose its services over specified port.
     8. Concurrency :-  The application should be designed to scale horizontally by adding more processes, rather than vertically by adding resources to a single process.
-    9. Disposability :- Maximize ro 
+    9. Disposability :- Maximize robustness with fast startup and graceful shutdown.
+    10. Dev/Prod Parity: Keep development, staging, and production as similar as possible. This minimizes the risk of bugs that only appear in certain environments.
+    11. Logs: Treat logs as event streams. The application should produce logs as a continuous stream.
+    12. Admin Processes: Run admin/management tasks as one-off processes. These tasks should be executed in the same environment as the application to ensure consistency.
 
