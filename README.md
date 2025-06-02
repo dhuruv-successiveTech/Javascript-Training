@@ -47,5 +47,8 @@ Twelve-Factor App :-
     3. Configuration :- Store configuration in the environment. This practice allows for easy adaptation of the application to different environments without modifying the codebase.
     4. Backing Services :- Treat backing services such as databses, queues and caches as attached resources.
     5. Build, Release, Run :- Strictly separate te build, release and the run stages. This separation ensures a clear and reproducible deployment process.
-    6. Processes :- Execute the application as one or more stateless processes. Any persistent data should be stored in backing services, not in the 
+    6. Processes :- Execute the application as one or more stateless processes. Any persistent data should be stored in backing services, not in the application itself.
+    7. Port Binding :- The application should be self-contained and expose its services over specified port.
+    8. Concurrency :-  The application should be designed to scale horizontally by adding more processes, rather than vertically by adding resources to a single process.
+    9. Disposability :- Maximize ro 
 
