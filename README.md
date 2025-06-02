@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Javascript-Training
 
 Atomic Design :- 
@@ -56,5 +55,4 @@ Twelve-Factor App :-
     11. Logs: Treat logs as event streams. The application should produce logs as a continuous stream.
     12. Admin Processes: Run admin/management tasks as one-off processes. These tasks should be executed in the same environment as the application to ensure consistency.
 
-=======
->>>>>>> 305dbf4ab5585da61295a234c97823b9df5dea5c
+
