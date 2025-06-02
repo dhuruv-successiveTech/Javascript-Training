@@ -39,5 +39,9 @@ Atomic Design :-
 
 Twelve-Factor App :-
 
+    The Tweleve-Factor App is a methodology designed to guide the development of software-as-a-service (SaaS) applications, particularly intended for deployment of modern cloud platforms.
+
+    The 12 factors are  
+
 
 
