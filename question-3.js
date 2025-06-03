@@ -5,7 +5,7 @@
         return "Avi ";
     }
 
-    let fullName=function(fname){
+    let fullName=function(fname){ // Taking function as an arguement
         return fname+"Kumar";    
     }
     let myName = fullName(firstName());
