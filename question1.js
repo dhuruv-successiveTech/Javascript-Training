@@ -13,3 +13,4 @@ function generateRandom(){
 console.log(generateRandom());
 console.log(generateRandom());
 
+
