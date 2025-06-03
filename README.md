@@ -7,13 +7,13 @@ Atomic Design is a methodology for creating design systems and UI components in 
 Atomic Design breaks the UI into 5 hierarchical levels. These are:
 
 1. **Atoms** – These are the basic building blocks.  
-   Example: Buttons, input fields, labels._
+   Example: Buttons, input fields, labels.
 
 2. **Molecules** – Group of atoms working together.  
-   Example: A form input + label + error text._
+   Example: A form input + label + error text.
 
 3. **Organisms** – Relatively complex group of UI elements.  
-   Example: Navbar, card component._
+   Example: Navbar, card component.
 
 4. **Templates** – Page-level layouts using organisms that define the structure of code, but not the real content.
 
