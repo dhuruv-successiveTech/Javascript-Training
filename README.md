@@ -27,16 +27,16 @@ Atomic Design breaks the UI into 5 hierarchical levels. These are:
   - Button  
 
 - **Molecule (Small Combinations)**
-  - `FormGroup` = Label + Input  
+  - FormGroup = Label + Input  
 
 - **Organism (Full Sections)**
-  - `LoginForm` = FormGroup + Button  
+  - LoginForm = FormGroup + Button  
 
 - **Template (Layouts)**
-  - `AuthPageTemplate` = LoginForm + Logo + InfoText + Background  
+  - AuthPageTemplate = LoginForm + Logo + InfoText + Background  
 
 - **Page (Complete Page)**
-  - `LoginPage` = AuthPageTemplate with real text, links, data props, etc.
+  - LoginPage = AuthPageTemplate with real text, links, data props, etc.
 
 ### Advantages of Atomic Design
 
