@@ -1,60 +1,77 @@
-<<<<<<< HEAD
-# Javascript-Training
+# JavaScript-Training
 
-Atomic Design :- 
+## Atomic Design
 
-    Atomic Design is a methodology for creating design system and UI components in a structure, reusable, and scalable way. It was introduced by Brad Frost and is widely used in modern frontend development, especially in frameworks like react, vue, angular etc.
+Atomic Design is a methodology for creating design systems and UI components in a structured, reusable, and scalable way. It was introduced by Brad Frost and is widely used in modern frontend development, especially in frameworks like React, Vue, Angular, etc.
 
+Atomic Design breaks the UI into 5 hierarchical levels. These are:
 
-    Atmoic design breaks the UI into 5 hierarchical levels, these are:- 
-    1. Atoms : These are the basic building blocks, example:- Buttons, input fields, labels.
-    2. Molecules :- Group of atoms working together eg. a form-input + label + error text  
-    3. Organisms- :- Relatively complex group of UI elements (e.g navbar, card component).
-    4. Templates :- Page level layouts using organisms, that defines the structure of code, but not the real content.
-    5. Pages :- Real implementation of templates with actual content and data.
+1. **Atoms** – These are the basic building blocks.  
+   Example: Buttons, input fields, labels._
 
-    Example Building a Login Form:- 
+2. **Molecules** – Group of atoms working together.  
+   Example: A form input + label + error text._
 
-    * Atoms (HTML Elements)
-        > Input
-        > Label
-        > Button
+3. **Organisms** – Relatively complex group of UI elements.  
+   Example: Navbar, card component._
 
-    * Molecule (Small Combinations)
-        > FormGroup = Label + Input
+4. **Templates** – Page-level layouts using organisms that define the structure of code, but not the real content.
 
-    * Organism (Full Sections)
-        > LoginForm = FormGroup + Button
+5. **Pages** – Real implementation of templates with actual content and data.
 
-    * Template (Layouts)
-        > AuthPageTemplate = LoginForm + Logo + InfoText + Background
+### Example: Building a Login Form
 
-    * Page (Complete page)
-        > LoginPage =   AuthPageTemplate with real text, links, data props etc  
+- **Atoms (HTML Elements)**
+  - Input  
+  - Label  
+  - Button  
 
-    Advantages of Atomic Design
+- **Molecule (Small Combinations)**
+  - `FormGroup` = Label + Input  
 
-    * Promotes reusability and consistency.
-    * Makes testing and documentation easier.
+- **Organism (Full Sections)**
+  - `LoginForm` = FormGroup + Button  
 
+- **Template (Layouts)**
+  - `AuthPageTemplate` = LoginForm + Logo + InfoText + Background  
 
-Twelve-Factor App :-
+- **Page (Complete Page)**
+  - `LoginPage` = AuthPageTemplate with real text, links, data props, etc.
 
-    The Tweleve-Factor App is a methodology designed to guide the development of software-as-a-service (SaaS) applications, particularly intended for deployment of modern cloud platforms.
+### Advantages of Atomic Design
 
-    The 12 factors are :- 
-    1. Codebase :- Maintain a single codebase tracked in version control, with many deploys. This ensures consistency accross different deployment environments.
-    2. Dependencies :- Explicitly declare and isolate dependencies. 
-    3. Configuration :- Store configuration in the environment. This practice allows for easy adaptation of the application to different environments without modifying the codebase.
-    4. Backing Services :- Treat backing services such as databses, queues and caches as attached resources.
-    5. Build, Release, Run :- Strictly separate te build, release and the run stages. This separation ensures a clear and reproducible deployment process.
-    6. Processes :- Execute the application as one or more stateless processes. Any persistent data should be stored in backing services, not in the application itself.
-    7. Port Binding :- The application should be self-contained and expose its services over specified port.
-    8. Concurrency :-  The application should be designed to scale horizontally by adding more processes, rather than vertically by adding resources to a single process.
-    9. Disposability :- Maximize robustness with fast startup and graceful shutdown.
-    10. Dev/Prod Parity: Keep development, staging, and production as similar as possible. This minimizes the risk of bugs that only appear in certain environments.
-    11. Logs: Treat logs as event streams. The application should produce logs as a continuous stream.
-    12. Admin Processes: Run admin/management tasks as one-off processes. These tasks should be executed in the same environment as the application to ensure consistency.
+- Promotes reusability and consistency.  
+- Makes testing and documentation easier.
 
-=======
->>>>>>> 305dbf4ab5585da61295a234c97823b9df5dea5c
+---
+
+## Twelve-Factor App
+
+The Twelve-Factor App is a methodology designed to guide the development of software-as-a-service (SaaS) applications, particularly intended for deployment on modern cloud platforms.
+
+### The 12 Factors Are:
+
+1. **Codebase** – Maintain a single codebase tracked in version control, with many deploys. This ensures consistency across different deployment environments.
+
+2. **Dependencies** – Explicitly declare and isolate dependencies.
+
+3. **Configuration** – Store configuration in the environment. This practice allows for easy adaptation of the application to different environments without modifying the codebase.
+
+4. **Backing Services** – Treat backing services such as databases, queues, and caches as attached resources.
+
+5. **Build, Release, Run** – Strictly separate the build, release, and run stages. This separation ensures a clear and reproducible deployment process.
+
+6. **Processes** – Execute the application as one or more stateless processes. Any persistent data should be stored in backing services, not in the application itself.
+
+7. **Port Binding** – The application should be self-contained and expose its services over a specified port.
+
+8. **Concurrency** – The application should be designed to scale horizontally by adding more processes, rather than vertically by adding resources to a single process.
+
+9. **Disposability** – Maximize robustness with fast startup and graceful shutdown.
+
+10. **Dev/Prod Parity** – Keep development, staging, and production as similar as possible. This minimizes the risk of bugs that only appear in certain environments.
+
+11. **Logs** – Treat logs as event streams. The application should produce logs as a continuous stream.
+
+12. **Admin Processes** – Run admin/management tasks as one-off processes. These tasks should be executed in the same environment as the application to ensure consistency.
+
