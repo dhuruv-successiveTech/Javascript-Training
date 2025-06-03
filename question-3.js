@@ -6,8 +6,8 @@
     }
 
     let fullName=function(fname){ // Taking function as an arguement
-        return fname+"Kumar";    
+        return fname()+"Kumar";    
     }
-    let myName = fullName(firstName());
+    let myName = fullName(firstName);
     console.log(myName);
     
