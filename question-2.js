@@ -10,4 +10,4 @@
         console.log("Name is ",name)
         console.log("Phone number is ",phone)
       }
-      userDetails()
+      userDetails();
