@@ -1,5 +1,6 @@
 // Q5. Write a program to print all even number first and then all odd numbers using only one iteration
 
+// Ans.
     let [limit]=process.argv.slice(2);
 
     let even='';
