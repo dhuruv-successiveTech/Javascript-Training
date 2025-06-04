@@ -12,7 +12,7 @@
             odd+=i+' ';
         }
     }
-    console.log(even+' '+odd);
+    console.log(even+odd);
     
 
     
