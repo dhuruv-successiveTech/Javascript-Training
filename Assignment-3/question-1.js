@@ -9,27 +9,28 @@
             console.error("Error: Both operands must be valid numbers and operator must be one of +, -, *, /.");
             return;
         }
-        const num1 = parseFloat(a);
-        const num2 = parseFloat(b);
+        const floatNum1 = parseFloat(a);
+        const floatNum2 = parseFloat(b);
 
         // Perform the calculation
         switch (op) {
             case '+':
-                console.log(`The sum is ${num1 + num2}`);
+                console.log(`The sum is ${floatNum1 + floatNum2}`);
                 break;
             case '-':
-                console.log(`The subtraction is ${num1 - num2}`);
+                console.log(`The subtraction is ${floatNum1 - floatNum2}`);
                 break;
             case '*':
-                console.log(`The product is ${num1 * num2}`);
+                console.log(`The product is ${floatNum1 * floatNum2}`);
                 break;
             case '/':
-                if (num2 === 0) {
+                if (floatNum2 === 0) {
                     console.error("Error: Division by zero is not allowed.");
                 } else {
-                    console.log(`The division result is ${num1 / num2}`);
+                    console.log(`The division result is ${floatNum1 / floatNum2}`);
                 }
                 break;
+            default : return;
         }
     }
 

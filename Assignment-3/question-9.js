@@ -2,7 +2,7 @@
 
 // Ans. 
 
-    let [num]=process.argv.slice(2)
+    let [range]=process.argv.slice(2)
         
     function fibonacci(n){
         if(isNaN(n) || n<0){
@@ -15,6 +15,6 @@
         return fibonacci(n-1)+fibonacci(n-2)  // Recursive call
     }
 
-    for(let i=0;i<num;i++){
+    for(let i=0;i<range;i++){
         console.log(fibonacci(i));   
     }
