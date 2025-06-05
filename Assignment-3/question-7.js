@@ -8,4 +8,4 @@
             console.log(i); 
         }
     }
-    doubleTheNumber()
+    doubleTheNumber();

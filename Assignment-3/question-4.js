@@ -2,14 +2,21 @@
 
 // Ans
     let [n]=process.argv.slice(2);
-
-    for(let i=1;i<=n;i++){
-        if(i%2===0){
-            console.log(i); 
+    
+    function printEvenOdd(){
+        if(isNaN(n) || n<0){
+            console.error("!! Please enter a positive number");
+            return;
+        }
+        for(let i=1;i<=n;i++){
+            if(i%2===0){
+                console.log(i); 
+            }
+        }
+        for(let i=1;i<=n;i++){
+            if(i%2!==0){
+                console.log(i); 
+            }
         }
     }
-    for(let i=1;i<=n;i++){
-        if(i%2!==0){
-            console.log(i); 
-        }
-    }
+    printEvenOdd();

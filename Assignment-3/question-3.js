@@ -22,7 +22,7 @@
             if(k==i){
                 break;
             }
-            pattern+=' '
+            pattern+=' ';
         }
         console.log(pattern);
     }
@@ -36,7 +36,7 @@
             if(k==i){
                 break;
             }
-            pattern+=' '
+            pattern+=' ';
         }
         console.log(pattern);
     }

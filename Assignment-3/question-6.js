@@ -14,13 +14,10 @@
     }
 
     function primesInRange(){
-        let ans=[];
         for(let i=1;i<=50;i++){
             if(isPrime(i)){   // Returns true if number is prime
-                ans.push(i)
+                console.log(i);
             } 
         }
-        console.log(ans);
-        
     }
-    primesInRange()
+    primesInRange();
