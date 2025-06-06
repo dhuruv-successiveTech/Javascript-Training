@@ -1,4 +1,4 @@
-// Q1.  Write a program to remove duplicate charecters from a string ("Hello Yellow" => "Helo Yw")
+// Q1.  Write a program to remove duplicate characters from a string ("Hello Yellow" => "Helo Yw")
 
 // Ans.
 
