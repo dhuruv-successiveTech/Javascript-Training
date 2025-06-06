@@ -10,10 +10,7 @@ function intersectionOfArrays(array1, array2) {
   }
 
   for (let j = 0; j < setArray.length; j++) {
-    if (
-      setArray.includes(array2[j]) &&
-      newArray[newArray.length - 1] != array2[j]
-    ) {
+    if (setArray.includes(array2[j]) && newArray[newArray.length - 1] != array2[j]) {
       newArray.push(array2[j]);
     }
   }

@@ -4,8 +4,8 @@
 
 function arraySum(arr) {
   let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
+  for (const element of arr) {
+    sum += element;
   }
   return sum;
 }

@@ -1,3 +1,6 @@
+// Q14. Write a program to reverse an array
+
+// Ans.
 function reverseArray(arr) {
   let n = arr.length;
   let j = n - 1;

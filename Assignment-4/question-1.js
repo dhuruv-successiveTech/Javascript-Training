@@ -19,4 +19,4 @@ function removeDuplicateCharacter(str) {
   }
   console.log(newString);
 }
-removeDuplicateCharacter(inputString);  //"Hello Yellow"
+removeDuplicateCharacter(inputString);  //"Hello Yellow" => "Helo Yw"

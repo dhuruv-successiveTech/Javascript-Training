@@ -1,33 +1,42 @@
 // Q4. Write a program to convert given string to upperCase OR lowerCase.
 
 // Ans.
+const [inputString] = process.argv.slice(2);
 function toUpperCase(str) {
   // Uppercase
-  let newStr = "";
+  if(str === undefined){
+    console.error("Error!! Please enter a string");
+    return;
+  } 
+  let newString = "";
   for (let i = 0; i < str.length; i++) {
     let ch = str.charCodeAt(i);
     if (ch >= 97 && ch <= 122) {
-      newStr += String.fromCharCode(ch - 32);
+      newString += String.fromCharCode(ch - 32);
     } else {
-      newStr += String.fromCharCode(ch);
+      newString += String.fromCharCode(ch);
     }
   }
-  return newStr;
+  return newString;
 }
 
 function toLowerCase(str) {
   // lowercase
-  let newStr = "";
+  if(str === undefined){
+    console.error("Error!! Please enter a string");
+    return;
+  } 
+  let newString = "";
   for (let i = 0; i < str.length; i++) {
     let ch = str.charCodeAt(i);
     if (ch >= 65 && ch <= 90) {
-      newStr += String.fromCharCode(ch + 32);
+      newString += String.fromCharCode(ch + 32);
     } else {
-      newStr += String.fromCharCode(ch);
+      newString += String.fromCharCode(ch);
     }
   }
-  return newStr;
+  return newString;
 }
 
-console.log(toLowerCase("abcAbcDabBcc"));
-console.log(toUpperCase("abcAbcDabBcc"));
+console.log(toLowerCase(inputString));
+console.log(toUpperCase(inputString));

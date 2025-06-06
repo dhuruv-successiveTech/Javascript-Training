@@ -1,11 +1,11 @@
-// Q8. Write a program to remove dupliacte elements from an array
+// Q8. Write a program to remove duplicate elements from an array
 
 // Ans.
 function removeDuplicates(arr) {
   let count = [];
   let newArray = [];
   for (let i = 0; i < arr.length; i++) {
-    count[arr[i]] = count[arr[i]] + 1;
+    count[arr[i]]++;
   }
   for (let element in count) {
     if (isNaN(element)) {
@@ -17,4 +17,5 @@ function removeDuplicates(arr) {
   console.log(newArray);
 }
 
-removeDuplicates([1, 74, 2, 3, 74, 4, "9", 9, 6, 6, 6]);
+const inputArray=[1, 74, 2, 3, 74, 4, 9, 9, 6, 6, 6]
+removeDuplicates(inputArray);
