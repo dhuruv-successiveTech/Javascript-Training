@@ -1,6 +1,8 @@
 // Q2. Write a program to reverse a string ("Hello John" => "olleH nhoJ")
 
 // Ans.
+
+const [inputString] = process.argv.slice(2);
 function reverseString(str) {
   let newStr = "";
   let strArr = str.split(" ");
@@ -13,4 +15,10 @@ function reverseString(str) {
   }
   return newStr;
 }
-console.log(reverseString("Hello John"));
+console.log(reverseString(inputString));
+
+// Method 2
+
+// function reverseString2(str){
+//     return str.split(' ').
+// }
