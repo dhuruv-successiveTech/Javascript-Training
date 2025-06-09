@@ -3,13 +3,13 @@
 // Ans.
 
 const [inputString] = process.argv.slice(2);
-function reverseString(str) {
+const reverseString = (str) => {
   if(str === undefined){
     console.error("Error!! Please enter a string");
     return;
   }  
   let newString = "";
-  let strArray = str.split(" ");
+  const strArray = str.split(" ");
   for (let i = 0; i < strArray.length; i++) {
     let ch = strArray[i];
     for (let j = ch.length - 1; j >= 0; j--) {
@@ -19,11 +19,11 @@ function reverseString(str) {
   }
   return newString;
 }
-console.log(reverseString(inputString));
+console.log("Using method1 ",reverseString(inputString));
 
 // Method 2
 
-function reverseString2(str){
+const reverseString2 = (str) => {
     if(str === undefined){
       console.error("Error!! Please enter a string");
       return;
@@ -31,4 +31,4 @@ function reverseString2(str){
     return str.split(' ').map((element)=>element.split('').reverse().join('')).join(' ');
 }
 
-console.log(reverseString2(inputString));
+console.log("Using method2 ",reverseString2(inputString));

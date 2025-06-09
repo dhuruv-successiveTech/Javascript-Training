@@ -3,18 +3,20 @@
 // Ans.
 
 const [inputString] = process.argv.slice(2);
-function variableCount(str) {
+const variableCount = (str) => {
   if(str === undefined){
     console.error("Error!! Please enter a string");
     return;
   }  
-  let count = {};
+  const count = {};
   let newString = "";
   for (let i = 0; i < str.length; i++) {
-    count[str.charAt(i)] = (count[str.charAt(i)] || 0) + 1;
+    if(str[i]!==' '){
+      count[str[i]] = (count[str[i]] || 0) + 1;
+    }
   }
 
-  for (let element in count) {
+  for (const element in count) {
     newString += element + count[element];
   }
   return newString;

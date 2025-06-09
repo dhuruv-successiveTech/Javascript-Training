@@ -4,19 +4,18 @@
 
 const [inputString] = process.argv.slice(2);
 
-function removeDuplicateCharacter(str) {
+const removeDuplicateCharacter=(str)=> {
   if(str === undefined){
     console.error("Error!! Please enter a string");
     return;
   }
   let newString = "";
-  let set = "";
   for (let i = 0; i < str.length; i++) {
-    if (set.indexOf(str[i]) == -1) {
+    if (!newString.includes(str[i])) {
       newString += str[i];
-      set += str[i];
     }
   }
-  console.log(newString);
+  return newString;
 }
-removeDuplicateCharacter(inputString);  //"Hello Yellow" => "Helo Yw"
+console.log(removeDuplicateCharacter(inputString));
+ //"Hello Yellow" => "Helo Yw"

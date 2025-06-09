@@ -1,8 +1,8 @@
 // Q14. Write a program to reverse an array
 
 // Ans.
-function reverseArray(arr) {
-  let n = arr.length;
+const reverseArray=(arr) => {
+  const n = arr.length;
   let j = n - 1;
   for (let i = 0; i < n / 2; i++) {
     let temp = arr[i];
@@ -10,8 +10,8 @@ function reverseArray(arr) {
     arr[j] = temp;
     j--;
   }
+  return arr
 }
 
 const inputArray = [1, 2, 3, 4];
-reverseArray(inputArray);
-console.log(inputArray);
+console.log(reverseArray(inputArray));

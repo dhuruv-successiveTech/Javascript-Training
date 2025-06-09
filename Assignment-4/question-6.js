@@ -2,7 +2,7 @@
 
 // Ans.
 
-function arraySum(arr) {
+const arraySum = (arr) => {
   let sum = 0;
   for (const element of arr) {
     sum += element;

@@ -2,42 +2,23 @@
 
 // Ans.
 const [inputString] = process.argv.slice(2);
-function toUpperCase(str) {
-  // Uppercase
+const toLowerOrUpperCase = (str) => {
   if(str === undefined){
     console.error("Error!! Please enter a string");
     return;
   } 
   let newString = "";
   for (let i = 0; i < str.length; i++) {
-    let ch = str.charCodeAt(i);
-    if (ch >= 97 && ch <= 122) {
-      newString += String.fromCharCode(ch - 32);
-    } else {
-      newString += String.fromCharCode(ch);
-    }
-  }
-  return newString;
-}
-
-function toLowerCase(str) {
-  // lowercase
-  if(str === undefined){
-    console.error("Error!! Please enter a string");
-    return;
-  } 
-  let newString = "";
-  for (let i = 0; i < str.length; i++) {
-    let ch = str.charCodeAt(i);
+    let ch = str.charCodeAt(i);    
     if (ch >= 65 && ch <= 90) {
-      newString += String.fromCharCode(ch + 32);
-    } else {
-      newString += String.fromCharCode(ch);
+      newString += String.fromCharCode(ch+32);
+    } else if(ch>=97 && ch<=122){
+      newString += String.fromCharCode(ch - 32);
+    }else {
+      newString +=str[i];
     }
   }
   return newString;
 }
-
-console.log(toLowerCase(inputString));
-console.log(toUpperCase(inputString));
+console.log(toLowerOrUpperCase(inputString));
 

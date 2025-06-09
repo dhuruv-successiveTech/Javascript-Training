@@ -1,9 +1,25 @@
 // Q8. Write a program to remove duplicate elements from an array
 
 // Ans.
-function removeDuplicates(arr) {
-  let count = {};
-  let newArray = [];
+
+const removeDuplicates1 = (arr) =>{
+  const unique = [];
+  for(let i=0;i<arr.length;i++){
+    if(!unique.includes(arr[i])){
+      unique.push(arr[i])
+    }
+  }
+  return unique;
+}
+
+const inputArray=[1, 74, 2, 3, 74, 4, 9, 9, 6, 6, 6]
+console.log("Using method 1",removeDuplicates1(inputArray));
+
+
+
+const removeDuplicates2=(arr) =>{
+  const count = {};
+  const newArray = [];
   for (let i = 0; i < arr.length; i++) {
     count[arr[i]]++;
   }
@@ -14,8 +30,8 @@ function removeDuplicates(arr) {
       newArray.push(parseFloat(element));
     }
   }
-  console.log(newArray);
+  return newArray;
 }
 
-const inputArray=[1, 74, 2, 3, 74, 4, 9, 9, 6, 6, 6]
-removeDuplicates(inputArray);
+console.log("Using method 2",removeDuplicates2(inputArray));
+

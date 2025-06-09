@@ -2,8 +2,8 @@
 
 // Ans.
 
-function lastDuplicateIndex(arr) {
-  let visited = [];
+const lastDuplicateIndex = (arr) => {
+  const visited = [];
   let lastIndex = -1;
   for (let i = 0; i < arr.length; i++) {
     if (visited.indexOf(arr[i])!==-1) {
@@ -12,7 +12,7 @@ function lastDuplicateIndex(arr) {
       visited.push(arr[i]);
     }
   }
-  console.log(lastIndex);
+  return lastIndex;
 }
 
-lastDuplicateIndex([1, 7, 2, 3, 4, 9, 6,12]);
+console.log(lastDuplicateIndex([1, 7, 2, 3, 4, 9, 6,6,12]));

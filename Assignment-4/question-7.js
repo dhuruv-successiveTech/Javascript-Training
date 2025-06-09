@@ -1,22 +1,19 @@
 // // Q7. Write a program to find index of duplicate elements in an array
 
-// Ans. 
+// Ans.
 
-function indexOfDuplicates(arr) {
-  const elements = {}; 
-  const duplicates = []; 
+const indexOfDuplicates = (arr) => {
+  const elements = {};
+  const duplicates = [];
   for (let i = 0; i < arr.length; i++) {
-    let key = arr[i];
-    if (elements[key] === undefined) {
-      elements[key] = i; // First time seeing this value
-    } 
-    else {
-      if (!duplicates.includes(elements[key])) {
-        duplicates.push(elements[key]); // Add first occurrence index
-      }
+    const key = arr[i];
+    if (elements[key]!==undefined){
+      duplicates.push(i);  //if value is not undefined then push its value into duplicates.
+    } else {
+      elements[key] = i; // if value of key is undefined then give it the index as value.
     }
   }
-  console.log(duplicates);
-}
+  return duplicates;
+};
 
-indexOfDuplicates([1, 1, 1, 74, 2, 3, 4, 9, 9, 6, 6, 6, 100, 100]);
+console.log(indexOfDuplicates([1, 1, 1, 74, 2, 3, 4, 9, 9, 6, 6, 6, 100, 100]));
