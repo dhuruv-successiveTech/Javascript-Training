@@ -1,0 +1,14 @@
+// Q2. Write a program to sort an array of object on the basis of age ({name:"John", age:26})
+
+// Ans.
+
+let inputArray = [
+  { name: "John", age: 26 },
+  { name: "Raj", age: 21 },
+  { name: "Doe", age: 23 },
+  { name: "Krish", age: 25 },
+];
+
+inputArray.sort((a,b)=>a.age-b.age);
+console.log(inputArray);
+
