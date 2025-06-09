@@ -40,3 +40,4 @@ function toLowerCase(str) {
 
 console.log(toLowerCase(inputString));
 console.log(toUpperCase(inputString));
+
