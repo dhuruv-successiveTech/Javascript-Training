@@ -2,12 +2,12 @@
 
 // Ans.
 function removeDuplicates(arr) {
-  let count = [];
+  let count = {};
   let newArray = [];
   for (let i = 0; i < arr.length; i++) {
     count[arr[i]]++;
   }
-  for (let element in count) {
+  for (const element in count) {
     if (isNaN(element)) {
       newArray.push(element);
     } else {

@@ -3,8 +3,8 @@
 // Ans. 
 
 function indexOfDuplicates(arr) {
-  let elements = {}; 
-  let duplicates = []; 
+  const elements = {}; 
+  const duplicates = []; 
   for (let i = 0; i < arr.length; i++) {
     let key = arr[i];
     if (elements[key] === undefined) {
