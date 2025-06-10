@@ -2,7 +2,7 @@
 
 // Ans.
 
-let inputArray = [
+const inputArray = [
   { name: "John", age: 26 , id:1},
   { name: "Raj", age: 21 , id:2},
   { name: "Doe", age: 23 , id:3},
