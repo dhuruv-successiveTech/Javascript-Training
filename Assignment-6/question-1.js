@@ -13,7 +13,7 @@ class BankAccount {
     }
   }
   withdraw(withdrawMoney) {
-    if (withdrawMoney > 0 && withdrawMoney<this.balance) {
+    if (withdrawMoney > 0 && withdrawMoney < this.balance) {
       this.balance -= withdrawMoney;
       console.log(`Your account is debited with amount ${withdrawMoney}`);
     } else {
@@ -26,6 +26,7 @@ class BankAccount {
   }
 }
 
-
-const myAccount = new BankAccount(4000,"Dhuruv")
-myAccount.withdraw(5000)
+const myAccount = new BankAccount(4000, "Dhuruv");
+myAccount.deposit(500);
+myAccount.withdraw(1000);
+console.log(myAccount.balance);
