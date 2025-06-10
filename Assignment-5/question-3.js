@@ -1,4 +1,4 @@
-// Q2. Write a program to sort an array of object on the basis of age ({name:"John", age:26})
+// Q3. Write a program to remove all the id key from array of object ({name:"John", age:27, id:1})
 
 // Ans.
 

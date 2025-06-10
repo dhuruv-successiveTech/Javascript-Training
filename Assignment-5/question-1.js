@@ -2,13 +2,13 @@
 
 // Ans.
 
-let myObject = {
+const myObject = {
   name: "xyz",
   age: 21,
   gender: "Male",
 };
 // Method 1
-for (let key in myObject) {
+for (const key in myObject) {
   console.log(`key = ${key} : value = ${myObject[key]}`);
 }
 
