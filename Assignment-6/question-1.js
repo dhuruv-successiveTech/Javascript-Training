@@ -23,7 +23,6 @@ class BankAccount {
   }
   displayBalance() {
     console.log(`Your balance is ${this.balance}`);
-    
   }
 }
 
