@@ -25,11 +25,14 @@ class Person {
   }
 }
 
-const person1 = new Person("Raj","Singh",12);
-const person2 = new Person("Viru","Dev",13);
-const person3 = new Person("Abhi","Singh",14);
+// const person1 = new Person("Raj","Singh",12);
+// const person2 = new Person("Viru","Dev",13);
+// const person3 = new Person("Abhi","Singh",14);
 
-const personArray = [person1,person2,person3]
-console.log(Person.averageAge1(personArray));
-console.log(Person.averageAge2(personArray));
+// const personArray = [person1,person2,person3]
+
+const personArray = [{firstName:"Raj",lastName:"Singh",age:12},{firstName:"Viru",lastName:"Dev",age:13},{firstName:"Abhi",lastName:"Singh",age:14}];
+
+console.log("Average age using method 1",Person.averageAge1(personArray));
+console.log("Average age using method 1",Person.averageAge2(personArray));
 
