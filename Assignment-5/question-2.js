@@ -9,6 +9,8 @@ const inputArray = [
   { name: "Krish", age: 25 },
 ];
 
-inputArray.sort((a,b)=>a.age-b.age);
-console.log(inputArray);
+const sortArrayAscending = (inputArray) => {
+  return inputArray.sort((a, b) => a.age - b.age);
+};
 
+console.log(sortArrayAscending(inputArray)); //Array sorted on basis of age.

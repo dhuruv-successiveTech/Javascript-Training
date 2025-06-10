@@ -3,13 +3,24 @@
 // Ans.
 
 const inputArray = [
-  { name: "John", age: 26 , id:1},
-  { name: "Raj", age: 21 , id:2},
-  { name: "Doe", age: 23 , id:3},
-  { name: "Krish", age: 25 , id:4}
+  { name: "John", age: 26, id: 1 },
+  { name: "Raj", age: 21, id: 2 },
+  { name: "Doe", age: 23, id: 3 },
+  { name: "Krish", age: 25, id: 4 },
 ];
 
-inputArray.forEach(element=>(
-    delete element.id
-))
-console.log(inputArray);
+// Method 1 using forEach loop and delete.
+const removeIdKey1 = (inputArray) => {
+  inputArray.forEach((element) => delete element.id);
+};
+
+removeIdKey1(inputArray);
+console.log("Using method 1 :",inputArray);
+
+// Method 2 using map and rest.
+
+const removeIdKey2 = (inputArray) => {
+  return inputArray.map(({id,...rest})=>({...rest}))
+}
+
+console.log("Using method 2 :",removeIdKey2(inputArray));

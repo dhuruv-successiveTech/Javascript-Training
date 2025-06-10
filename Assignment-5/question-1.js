@@ -3,17 +3,38 @@
 // Ans.
 
 const myObject = {
-  name: "xyz",
+  name: "John",
   age: 21,
   gender: "Male",
 };
-// Method 1
-for (const key in myObject) {
-  console.log(`key = ${key} : value = ${myObject[key]}`);
-}
 
-// Method 2
+// Method 1 using for-of loop
 
-Object.entries(myObject).forEach(([key, value]) =>
-  console.log(`key = ${key} : value = ${value}`)
-);
+const iterateOverObject1 = (inputObject) => {
+  for (const key in inputObject) {
+    console.log(`key = ${key} : value = ${inputObject[key]}`);
+  }
+};
+console.log("Using method 1");
+iterateOverObject1(myObject);
+
+// Method 2 using Object.entries and forEach loop
+
+const iterateOverObject2 = (inputObject) => {
+  Object.entries(inputObject).forEach(([key, value]) =>
+    console.log(`key = ${key} : value = ${value}`)
+  );
+};
+console.log("Using method 2");
+iterateOverObject2(myObject);
+
+// Method 3 using Object.keys and forEach loop
+
+const iterateOverObject3 = (inputObject) => {
+  Object.keys(inputObject).forEach((key) =>
+    console.log(`key = ${key} : value = ${inputObject[key]}`)
+  );
+};
+console.log("Using method 3");
+
+iterateOverObject3(myObject);
