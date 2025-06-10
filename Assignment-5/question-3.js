@@ -11,7 +11,11 @@ const inputArray = [
 
 // Method 1 using forEach loop and delete.
 const removeIdKey1 = (inputArray) => {
-  inputArray.forEach((element) => delete element.id);
+  try {
+    inputArray.forEach((element) => delete element.id);
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 removeIdKey1(inputArray);
@@ -20,7 +24,11 @@ console.log("Using method 1 :",inputArray);
 // Method 2 using map and rest.
 
 const removeIdKey2 = (inputArray) => {
-  return inputArray.map(({id,...rest})=>({...rest}))
+ try {
+   return inputArray.map(({id,...rest})=>({...rest}))
+ } catch (error) {
+  console.error(error);  
+ }
 }
 
 console.log("Using method 2 :",removeIdKey2(inputArray));

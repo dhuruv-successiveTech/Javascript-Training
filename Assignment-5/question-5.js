@@ -7,28 +7,32 @@
 
 const inputObj = {
   a: 1,
-  b: { c: 2, d: [3, 4,5] },
+  b: { c: 2, d: [3, 4, 5] },
 };
 
 const flattenObjectOrArray = (inputObj) => {
-  const flatObject = {};
-  for (const key in inputObj) {
-    if (!inputObj.hasOwnProperty(key)) {
-      continue;
-    }
-    if (typeof inputObj[key] == "object" && inputObj[key] !== null) {
-      const innerObject = flattenObjectOrArray(inputObj[key]);
-      for (const x in innerObject) {
-        if (!innerObject.hasOwnProperty(x)) {
-          continue;
-        }
-        flatObject[key + "." + x] = innerObject[x];
+  try {
+    const flatObject = {};
+    for (const key in inputObj) {
+      if (!inputObj.hasOwnProperty(key)) {
+        continue;
       }
-    } else {
-      flatObject[key] = inputObj[key];
+      if (typeof inputObj[key] == "object" && inputObj[key] !== null) {
+        const innerObject = flattenObjectOrArray(inputObj[key]);
+        for (const x in innerObject) {
+          if (!innerObject.hasOwnProperty(x)) {
+            continue;
+          }
+          flatObject[key + "." + x] = innerObject[x];
+        }
+      } else {
+        flatObject[key] = inputObj[key];
+      }
     }
+    return flatObject;
+  } catch (error) {
+    console.error(error);
   }
-  return flatObject;
 };
 
 console.log(flattenObjectOrArray(inputObj));

@@ -9,31 +9,35 @@ const inputObj = {
   subject: [{ sub1: "Physics" }, { sub2: "Chemistry" }],
 };
 
-console.log("Original Object :",inputObj);
+console.log("Original Object :", inputObj);
 
 const deepCloneOfObjectOrArrays = (inputObj) => {
-  if (typeof inputObj !== "object") {
-    return inputObj;
+  try {
+    if (typeof inputObj !== "object") {
+      return inputObj;
+    }
+    let deepObj;
+    if (Array.isArray(inputObj)) {
+      deepObj = [];
+      inputObj.map(
+        (item, index) => (deepObj[index] = deepCloneOfObjectOrArrays(item))
+      );
+    } else {
+      deepObj = {};
+      Object.keys(inputObj).forEach(
+        (key) => (deepObj[key] = deepCloneOfObjectOrArrays(inputObj[key]))
+      );
+    }
+    return deepObj;
+  } catch (error) {
+    console.error(error);
+    
   }
-  let deepObj;
-  if (Array.isArray(inputObj)) {
-    deepObj = [];
-    inputObj.map(
-      (item, index) => (deepObj[index] = deepCloneOfObjectOrArrays(item))
-    );
-  } else {
-    deepObj = {};
-    Object.keys(inputObj).forEach(
-      (key) => (deepObj[key] = deepCloneOfObjectOrArrays(inputObj[key]))
-    );
-  }
-  return deepObj;
 };
 
 const clonedObject = deepCloneOfObjectOrArrays(inputObj);
 clonedObject.subject[0].sub1 = "English";
-clonedObject.name= "doe";
-clonedObject.address.city= "Delhi";
+clonedObject.name = "doe";
+clonedObject.address.city = "Delhi";
 
-console.log("Deep Cloned Object :",clonedObject);
-
+console.log("Deep Cloned Object :", clonedObject);

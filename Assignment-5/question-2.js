@@ -10,7 +10,11 @@ const inputArray = [
 ];
 
 const sortArrayAscending = (inputArray) => {
-  return inputArray.sort((a, b) => a.age - b.age);
+  try {
+    return inputArray.sort((a, b) => a.age - b.age);
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 console.log(sortArrayAscending(inputArray)); //Array sorted on basis of age.
