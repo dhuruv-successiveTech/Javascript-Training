@@ -13,15 +13,15 @@ class Person {
   // Method 1 using forEach 
   static averageAge1(personArray){
     let sum=0;
-    personArray.forEach(element => {
-        sum+=element.age;
+    personArray.forEach(person => {
+        sum+=person.age;
     });
     return sum/personArray.length;
   }
 
   // Method 2 using reduce
   static averageAge2(personArray){
-    return personArray.reduce((sum,person)=>sum+person.age,0)/personArray.length;
+    return personArray.reduce((sum,person)=>sum+person?.age,0)/personArray.length;
   }
 }
 
