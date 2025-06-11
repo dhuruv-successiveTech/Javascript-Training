@@ -14,15 +14,9 @@ const flattenObjectOrArray = (inputObj) => {
   try {
     const flatObject = {};
     for (const key in inputObj) {
-      if (!inputObj.hasOwnProperty(key)) {
-        continue;
-      }
       if (typeof inputObj[key] == "object" && inputObj[key] !== null) {
         const innerObject = flattenObjectOrArray(inputObj[key]);
         for (const x in innerObject) {
-          if (!innerObject.hasOwnProperty(x)) {
-            continue;
-          }
           flatObject[key + "." + x] = innerObject[x];
         }
       } else {

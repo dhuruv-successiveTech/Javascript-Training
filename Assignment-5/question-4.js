@@ -19,7 +19,7 @@ const deepCloneOfObjectOrArrays = (inputObj) => {
     let deepObj;
     if (Array.isArray(inputObj)) {
       deepObj = [];
-      inputObj.map(
+      inputObj.forEach(
         (item, index) => (deepObj[index] = deepCloneOfObjectOrArrays(item))
       );
     } else {
