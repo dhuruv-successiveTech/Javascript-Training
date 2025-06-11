@@ -1,3 +1,5 @@
+// Q 3.1 Create a class Person with properties name, age, gender, and interests. Add a method greeting() that returns a string introducing the person. Also add a method farewell() that returns a string saying goodbye to the person.
+
 class Person {
   constructor(name, age, gender, interests) {
     this.name = name;

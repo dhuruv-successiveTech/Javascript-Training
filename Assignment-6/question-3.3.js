@@ -1,3 +1,5 @@
+// Q 3.3 Create a class Teacher that inherits from the Person class and has a property subjectsTaught. Override the farewell() method to include information about what the teacher teaches.
+
 class Person {
   constructor(name, age, gender, interests) {
     this.name = name;

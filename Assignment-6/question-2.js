@@ -13,12 +13,18 @@ class Shape {
 }
 
 class Rectangle extends Shape {
+  constructor(width,height){
+    super(width,height)
+  }
   getArea() {
     return `The area of Rectangle is ${this.width * this.height}`;
   }
 }
 
 class Triangle extends Shape {
+  constructor(width,height){
+    super(width,height)
+  }
   getArea() {
     return `The area of Triangle is ${0.5 * this.width * this.height}`;
   }
