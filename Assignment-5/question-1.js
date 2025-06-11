@@ -8,7 +8,7 @@ const myObject = {
   gender: "Male",
 };
 
-// Method 1 using for-of loop
+// Method 1 using for-in loop
 
 const iterateOverObject1 = (inputObject) => {
   try {
