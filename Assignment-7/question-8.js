@@ -20,12 +20,13 @@ const parallelApiOperation = async () => {
       "https://jsonplaceholder.typicode.com/posts/3"
     );
     const data3 = await response3.json();
-    resultantArray.push(data1,data2,data3)
-    console.log(resultantArray);
-    
+    resultantArray.push(data1, data2, data3);
+    return resultantArray;
   } catch (error) {
     console.error(error);
   }
 };
 
 parallelApiOperation()
+  .then((data) => console.log(data))
+  .catch((err) => console.error(err));

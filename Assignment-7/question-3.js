@@ -10,7 +10,7 @@
 const fetchData = () => {
   try {
     return new Promise((resolve, reject) => {
-      const check = true;
+      const check = false;
       setTimeout(() => {
         if (check) {
           resolve("Data fetched successfully");
