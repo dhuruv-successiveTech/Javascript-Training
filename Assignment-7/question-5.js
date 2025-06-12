@@ -26,7 +26,7 @@ class PromiseBasedTaskQueue {
         .then(res => {
           resolve(res)  // resolve promise 
         })
-        .catch((error)=>reject(err))
+        .catch((error)=>reject(error))
         .finally(()=>{
           this.running--;
           this.processQueue();
@@ -49,5 +49,6 @@ const queue = new PromiseBasedTaskQueue(3);
 
 // Add task to queue
 
-queue.addTask(createTask(1,2000))
-.then
+queue.addTask(createTask(1, 2000))
+  .then(result => console.log(result))
+  .catch(error => console.error(error));
