@@ -2,7 +2,7 @@
 
 // Ans.
 
-const fetchData = (callbackFun) => {
+const fetchApi = (callbackFun) => {
   try {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((response) => response.json())
@@ -13,8 +13,8 @@ const fetchData = (callbackFun) => {
   }
 };
 
-const callbackFun = (data) => {
+const fetchApiData = (data) => {
   console.log(data);
 };
 
-fetchData(callbackFun);
+fetchApi(fetchApiData);

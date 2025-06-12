@@ -2,9 +2,9 @@
 
 // Ans.
 
-const promiseWithDelay = async (delay) => {
+const promiseWithDelay = (delay) => {
   try {
-    return await new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve("Promise resolved");
       }, delay);

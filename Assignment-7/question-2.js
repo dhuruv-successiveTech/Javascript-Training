@@ -2,29 +2,26 @@
 
 // Ans.
 
-const multipleCallbackFun = (callback1, callback2, callback3) => {
-  callback1(callback2(callback3));
+const fetchDetails = (callback1, callback2, callback3) => {
+  callback1(callback2(callback3()));
 };
 
-const fun1 = (fun2) => {
-  console.log("Callback 1 ....");
-  fetch("https://jsonplaceholder.typicode.com/posts/3")
+const fetchPost = (fun2) => {
+  fetch("https://jsonplaceholder.typicode.com/posts")
     .then((response) => response.json())
-    .then((data) => console.log(data))
+    .then((data) => console.log(data.slice(0, 5)))
     .catch((error) => console.error(error));
 };
-const fun2 = (fun3) => {
-  console.log("Callback 2 ....");
-  fetch("https://jsonplaceholder.typicode.com/posts/2")
+const fetchUser = (fun3) => {
+  fetch("https://jsonplaceholder.typicode.com/users")
     .then((response) => response.json())
-    .then((data) => console.log(data))
+    .then((data) => console.log(data.slice(0, 5)))
     .catch((error) => console.error(error));
 };
-const fun3 = () => {
-  console.log("Callback 3 ....");
-  fetch("https://jsonplaceholder.typicode.com/posts/1")
+const fetchPhotos = () => {
+  fetch("https://jsonplaceholder.typicode.com/photos")
     .then((response) => response.json())
-    .then((data) => console.log(data))
+    .then((data) => console.log(data.slice(0, 5)))
     .catch((error) => console.error(error));
 };
-multipleCallbackFun(fun1, fun2, fun3());
+fetchDetails(fetchPost, fetchUser, fetchPhotos);

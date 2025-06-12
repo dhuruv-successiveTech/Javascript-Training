@@ -7,12 +7,11 @@
 
 // Ans.
 
-const fetchData = () => {
+const fetchData = (isRejected) => {
   try {
     return new Promise((resolve, reject) => {
-      const check = false;
       setTimeout(() => {
-        if (check) {
+        if (!isRejected) {
           resolve("Data fetched successfully");
         } else {
           reject(null);
@@ -23,7 +22,7 @@ const fetchData = () => {
     console.error(error);
   }
 };
-
-fetchData()
+const isRejected = false;
+fetchData(isRejected)
   .then((data) => console.log(data))
   .catch((err) => console.log(err));

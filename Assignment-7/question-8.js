@@ -2,31 +2,52 @@
 
 // Ans.
 
-const parallelApiOperation = async () => {
+const fetchPost = async () => {
   try {
-    const resultantArray = [];
-
-    const response1 = await fetch(
-      "https://jsonplaceholder.typicode.com/posts/1"
-    );
-    const data1 = await response1.json();
-
-    const response2 = await fetch(
-      "https://jsonplaceholder.typicode.com/posts/2"
-    );
-    const data2 = await response2.json();
-
-    const response3 = await fetch(
-      "https://jsonplaceholder.typicode.com/posts/3"
-    );
-    const data3 = await response3.json();
-    resultantArray.push(data1, data2, data3);
-    return resultantArray;
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const data = await response.json();
+    return data.slice(0, 5);
+  } catch (error) {
+    console.error(error);
+  }
+};
+const fetchUser = async () => {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+    const data = await response.json();
+    return data.slice(0, 5);
+  } catch (error) {
+    console.error(error);
+  }
+};
+const fetchPhotos = async () => {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/photos");
+    const data = await response.json();
+    return data.slice(0, 5);
   } catch (error) {
     console.error(error);
   }
 };
 
-parallelApiOperation()
-  .then((data) => console.log(data))
-  .catch((err) => console.error(err));
+const fetchDetails = async () => {
+  try {
+    const postDetails = fetchPost();
+    const userDetails = fetchUser();
+    const photosDetails = fetchPhotos();
+
+    const [post,user,photos] = await Promise.all([postDetails,userDetails,photosDetails])
+    const details = {
+      posts:post,
+      user:user,
+      photos:photos
+    }
+
+    console.log(details)
+    
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+fetchDetails();

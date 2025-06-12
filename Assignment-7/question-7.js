@@ -2,28 +2,50 @@
 
 // Ans.
 
-const multipleAsyncOperation = async () => {
+const fetchPost = async () => {
   try {
-    const response1 = await fetch(
-      "https://jsonplaceholder.typicode.com/posts/1"
-    );
-    const data1 = await response1.json();
-    console.log("Fetched Data1", data1);
-
-    const response2 = await fetch(
-      "https://jsonplaceholder.typicode.com/posts/2"
-    );
-    const data2 = await response2.json();
-    console.log("Fetched Data2", data2);
-
-    const response3 = await fetch(
-      "https://jsonplaceholder.typicode.com/posts/3"
-    );
-    const data3 = await response3.json();
-    console.log("Fetched Data3", data3);
+    console.log('Post');
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const data = await response.json();
+    return data.slice(0, 5);
+  } catch (error) {
+    console.error(error);
+  }
+};
+const fetchUser = async () => {
+  try {
+    console.log('User');
+    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+    const data = await response.json();
+    return data.slice(0, 5);
+  } catch (error) {
+    console.error(error);
+  }
+};
+const fetchPhotos = async () => {
+  try {
+    console.log('Photos');
+    const response = await fetch("https://jsonplaceholder.typicode.com/photos");
+    const data = await response.json();
+    return data.slice(0, 5);
   } catch (error) {
     console.error(error);
   }
 };
 
-multipleAsyncOperation();
+const fetchDetails = async () => {
+  try {
+    const postDetails = fetchPost();
+    const userDetails = fetchUser();
+    const photosDetails = fetchPhotos();
+
+    const response = await Promise.all([postDetails,userDetails,photosDetails])
+    console.log(response);
+    
+
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+fetchDetails();
