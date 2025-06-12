@@ -1,0 +1,25 @@
+// Q 3.1 Create a class Person with properties name, age, gender, and interests. Add a method greeting() that returns a string introducing the person. Also add a method farewell() that returns a string saying goodbye to the person.
+
+class Person {
+  constructor(name, age, gender, interests) {
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+    this.interests = interests;
+  }
+
+  greeting() {
+    return `Hi team, we have a new member. His name is ${this.name}, he is ${this.age} years old, and he is interested in ${this.interests.join(", ")}.`;
+  }
+
+  farewell() {
+    return `Thank you ${this.name}, for your hard work and dedication for our institution.`;
+  }
+}
+const person1 = new Person("John", 25, "male", [
+  "chess",
+  "online games",
+  "coding",
+]);
+console.log(person1.greeting());
+console.log(person1.farewell());
