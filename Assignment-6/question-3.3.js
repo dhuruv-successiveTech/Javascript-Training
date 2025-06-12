@@ -8,7 +8,7 @@ class Person {
     this.interests = interests;
   }
 
-  greetings() {
+  greeting() {
     return `Hi team, we have a new member in the team. His name ${this.name}, his age is ${this.age} and his interests are ${this.interests} .`;
   }
 
@@ -23,9 +23,10 @@ class Teacher extends Person {
     this.subjectsTaught = subjectsTaught;
   }
   farewell() {
-    return `Thank you for your dedication in teaching the subject ${this.subjectsTaught}`;
+    super.farewell()
+    return `Thank you for your dedication in teaching the subject ${this.subjectsTaught.join(', ')}.`;
   }
 }
 
-const teacher1 = new Teacher("Raj", 25, "male", "Playing chess", "Physics");
+const teacher1 = new Teacher("Raj", 25, "male", ['chess','online games', 'coding'], ['Physics','English','Mathematics']);
 console.log(teacher1.farewell());

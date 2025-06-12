@@ -8,27 +8,27 @@ class BankAccount {
   deposit(depositMoney) {
     if (depositMoney > 0) {
       this.balance += depositMoney;
-      console.log(`Your account is credited with amount ${depositMoney}`);
+      return `Your account is credited with amount ${depositMoney}.`;
     } else {
-      console.log(`Please enter an appropriate amount`);
-      return;
+      return `Please enter an appropriate amount.`;
+      
     }
   }
   withdraw(withdrawMoney) {
-    if (withdrawMoney > 0 && withdrawMoney < this.balance) {
+    if (withdrawMoney > 0 && withdrawMoney <= this.balance) {
       this.balance -= withdrawMoney;
-      console.log(`Your account is debited with amount ${withdrawMoney}`);
+      return `Your account is debited with amount ${withdrawMoney}.`;
     } else {
-      console.log(`Your balance is low`);
-      return;
+      return `Your balance is low.`;
     }
   }
   displayBalance() {
-    console.log(`Your balance is ${this.balance}`);
+    return `Your balance is ${this.balance}`;
   }
 }
 
 const myAccount = new BankAccount(4000, "Dhuruv");
-myAccount.deposit(500);
-myAccount.withdraw(1000);
-console.log(myAccount.balance);
+console.log(myAccount.deposit(500));
+console.log(myAccount.withdraw(1000));
+console.log(myAccount.displayBalance());
+

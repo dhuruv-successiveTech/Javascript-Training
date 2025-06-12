@@ -9,7 +9,7 @@ class Person {
     this.age = age;
   }
   fullName(){
-    return `Fullname is ${this.firstName} ${this.lastName}`;
+    return `Fullname is ${this.firstName} ${this.lastName}.`;
   }
   // Method 1 using forEach 
   static averageAge1(personArray){
@@ -35,5 +35,5 @@ class Person {
 const personArray = [{firstName:"Raj",lastName:"Singh",age:12},{firstName:"Viru",lastName:"Dev",age:13},{firstName:"Abhi",lastName:"Singh",age:14}];
 
 console.log("Average age using method 1",Person.averageAge1(personArray));
-console.log("Average age using method 1",Person.averageAge2(personArray));
+console.log("Average age using method 2",Person.averageAge2(personArray));
 

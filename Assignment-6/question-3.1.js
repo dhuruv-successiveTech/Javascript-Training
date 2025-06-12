@@ -8,14 +8,14 @@ class Person {
     this.interests = interests;
   }
 
-  greetings() {
-    return `Hi team, we have a new member in the team. His name ${this.name}, his age is ${this.age} and he has interests in ${this.interests} .`;
+  greeting() {
+    return `Hi team, we have a new member in the team. His name ${this.name}, his age is ${this.age} and he has interests in ${this.interests.join(', ')}.`;
   }
 
   farewell() {
     return `Thank you for your hard work and dedication, ${this.name}.`;
   }
 }
-const person1 = new Person("John", 25, "male", "Playing chess");
-console.log(person1.greetings());
+const person1 = new Person("John", 25, "male", ['chess','online games', 'coding']);
+console.log(person1.greeting());
 console.log(person1.farewell());

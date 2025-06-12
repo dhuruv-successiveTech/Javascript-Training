@@ -10,8 +10,8 @@ class Person {
     this.interests = interests;
   }
 
-  greetings() {
-    return `Hi team, we have a new member in the team. His name ${this.name}, his age is ${this.age} and his interests are ${this.interests} .`;
+  greeting() {
+    return `Hi team, we have a new member in the team. His name ${this.name}, his age is ${this.age} and his interests are ${this.interests.join(', ')} .`;
   }
 
   farewell() {
@@ -24,10 +24,11 @@ class Student extends Person {
     super(name, age, gender, interests);
     this.studies = studies;
   }
-  greetings() {
-    return `The student ${this.name} is doing very well in ${this.studies}`;
+  greeting() {
+    super.greeting()
+    return `The student ${this.name} is doing very well in ${this.studies}. He is good in communication and very dedicated.`;
   }
 }
 
-const student1 = new Student("John", 25, "male", "Playing chess", "English");
-console.log(student1.greetings());
+const student1 = new Student("John", 25, "male", ['chess','online games', 'coding'], "English");
+console.log(student1.greeting());
