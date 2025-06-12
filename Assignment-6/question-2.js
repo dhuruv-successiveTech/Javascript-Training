@@ -8,8 +8,7 @@ class Shape {
     this.height = height;
   }
   getArea() {
-    throw new Error( "Please create object with respect to shape and then get area.");
-    
+    throw new Error("Please create an object of a specific shape (e.g., Rectangle or Triangle) to calculate the area.");
   }
 }
 

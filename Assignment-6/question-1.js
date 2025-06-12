@@ -11,7 +11,6 @@ class BankAccount {
       return `Your account is credited with amount ${depositMoney}.`;
     } else {
       return `Please enter an appropriate amount.`;
-      
     }
   }
   withdraw(withdrawMoney) {

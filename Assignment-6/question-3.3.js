@@ -9,11 +9,11 @@ class Person {
   }
 
   greeting() {
-    return `Hi team, we have a new member in the team. His name ${this.name}, his age is ${this.age} and his interests are ${this.interests} .`;
+    return `Hi team, we have a new member in the team. His name is ${this.name}, he is ${this.age} years old, and his interests are ${this.interests.join(', ')}.`;
   }
 
   farewell() {
-    return `Thank you for your dedication, ${this.name}.`;
+    return `Dear ${this.name}, we thank you for your dedication to our institution.`;
   }
 }
 
@@ -22,11 +22,12 @@ class Teacher extends Person {
     super(name, age, gender, interests);
     this.subjectsTaught = subjectsTaught;
   }
+
   farewell() {
-    super.farewell()
-    return `Thank you for your dedication in teaching the subject ${this.subjectsTaught.join(', ')}.`;
+    const farewellString = super.farewell();
+    return `${farewellString} You have great knowledge of the subjects you teach, including ${this.subjectsTaught.join(', ')}.`;
   }
 }
 
-const teacher1 = new Teacher("Raj", 25, "male", ['chess','online games', 'coding'], ['Physics','English','Mathematics']);
+const teacher1 = new Teacher("Raj", 25, "male", ['chess', 'online games', 'coding'], ['Physics', 'English', 'Mathematics']);
 console.log(teacher1.farewell());

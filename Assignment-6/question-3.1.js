@@ -9,13 +9,17 @@ class Person {
   }
 
   greeting() {
-    return `Hi team, we have a new member in the team. His name ${this.name}, his age is ${this.age} and he has interests in ${this.interests.join(', ')}.`;
+    return `Hi team, we have a new member. His name is ${this.name}, he is ${this.age} years old, and he is interested in ${this.interests.join(", ")}.`;
   }
 
   farewell() {
-    return `Thank you for your hard work and dedication, ${this.name}.`;
+    return `Thank you ${this.name}, for your hard work and dedication for our institution.`;
   }
 }
-const person1 = new Person("John", 25, "male", ['chess','online games', 'coding']);
+const person1 = new Person("John", 25, "male", [
+  "chess",
+  "online games",
+  "coding",
+]);
 console.log(person1.greeting());
 console.log(person1.farewell());
