@@ -13,25 +13,22 @@ class RateLimiter {
     });
   }
 
-  // Process tasks in the queue respecting the concurrency limit
   processQueue() {
     if (this.running >= this.limit || this.queue.length === 0) {
       return; // If the limit is reached, or no tasks in the queue
     }
 
-    // Get the next task from the queue
     const nextTask = this.queue.shift();
     this.running++; // Increment running task count
 
     // Execute the task
     nextTask().finally(() => {
-      this.running--; // Decrement running task count after the task is done
-      this.processQueue(); // Continue processing the next tasks in the queue
+      this.running--; 
+      this.processQueue(); 
     });
   }
 }
 
-// Simulate a task (returns a promise that resolves after a given time)
 const createTask = (id, time) => {
   return () =>
     new Promise((resolve) => {
@@ -43,8 +40,7 @@ const createTask = (id, time) => {
     });
 };
 
-// Example Usage:
-const rateLimiter = new RateLimiter(2); // Limit to 3 concurrent tasks
+const rateLimiter = new RateLimiter(2); 
 
 
 for (let i = 1; i <= 5; i++) {
