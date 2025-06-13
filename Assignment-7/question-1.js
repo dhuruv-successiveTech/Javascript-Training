@@ -6,7 +6,7 @@ const fetchApi = (callbackFun) => {
   try {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((response) => response.json())
-      .then((data) => callbackFun(data[0]))
+      .then((data) => callbackFun(data.slice(0,5)))
       .catch((error) => console.error(error));
   } catch (error) {
     console.error(error);
