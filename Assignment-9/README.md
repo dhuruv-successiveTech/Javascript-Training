@@ -23,11 +23,11 @@ npm install lodash
 
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 
-## Lodash contains a wide array of utility functions that help with common tasks such as:
+#### Lodash contains a wide array of utility functions that help with common tasks such as:
 
-- **Array Function**:  _.chunk(), _.flatten(), _.uniq(), _.difference(), etc.
+- **Array Function**: _.chunk(), _.flatten(), _.uniq(), _.difference(), etc.
 
-- **Collection Functions**:     : _.each(), _.map(), _.filter(), _.reduce(), etc.
+- **Collection Functions**: _.each(), _.map(), _.filter(), _.reduce(), etc.
 
 - **Object Functions**: _.clone(), _.merge(), _.get(), _.set(), etc.
 
