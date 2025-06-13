@@ -3,12 +3,12 @@
 //    console.log(myArray[i]);
 // }
 
-/* Ans. 
+// Ans. 
 
-The loop will run 5 time, it will give undefined for the 5th index. So it can be resolved by setting 
+/* The loop will run 5 time, it will give undefined for the 5th index. So it can be resolved by setting 
 the condition as i<myArray.length
 */
-// Corrected Code
+// Modified Code 
 
 const myArray = [1, 2, 3, 4];
 for (let i = 0; i < myArray.length; i++) {

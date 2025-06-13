@@ -7,8 +7,7 @@
 
 // There is no error in above code, but we can write the above code in a more better way
 
-// New Code
-
+// Modified Code 
 
 const myArray = [1, 2, 3, 4];
 for (let i = 0; i < myArray.length; i++) {

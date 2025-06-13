@@ -7,7 +7,7 @@
 
 // We should use bracket notation to access the properties of the object. 
 
-// Corrected Code
+// Modified Code 
 
 const myObject = { name: 'John', age: 30 };
 for (const property in myObject) {

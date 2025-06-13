@@ -13,11 +13,11 @@
 // }
 
 // Ans.
-/*  In above code first part is correct, but in second part ParseInt('hello world') returns NaN. 
-    So we should appluy a check for !isNaN(myNumber) just to verify that result is a number or not.
-*/
+// In above code first part is correct, but in second part ParseInt('hello world') returns NaN. 
+// So we should appluy a check for !isNaN(myNumber) just to verify that result is a number or not.
 
-// Corrected Code 
+
+// Modified Code 
 
 const myString = 'hello world';
 if (myString.length > 0) {
