@@ -23,7 +23,7 @@ npm install lodash
 
 <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
 
-Lodash contains a wide array of utility functions that help with common tasks such as:
+## Lodash contains a wide array of utility functions that help with common tasks such as:
 
 - **Array Function**:  _.chunk(), _.flatten(), _.uniq(), _.difference(), etc.
 
