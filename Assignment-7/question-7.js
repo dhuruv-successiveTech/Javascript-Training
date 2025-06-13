@@ -4,7 +4,6 @@
 
 const fetchPost = async () => {
   try {
-    console.log('Post');
     const response = await fetch("https://jsonplaceholder.typicode.com/posts");
     const data = await response.json();
     return data.slice(0, 5);
@@ -14,7 +13,6 @@ const fetchPost = async () => {
 };
 const fetchUser = async () => {
   try {
-    console.log('User');
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
     const data = await response.json();
     return data.slice(0, 5);
@@ -24,7 +22,6 @@ const fetchUser = async () => {
 };
 const fetchPhotos = async () => {
   try {
-    console.log('Photos');
     const response = await fetch("https://jsonplaceholder.typicode.com/photos");
     const data = await response.json();
     return data.slice(0, 5);

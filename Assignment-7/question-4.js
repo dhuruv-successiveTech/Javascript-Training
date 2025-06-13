@@ -3,8 +3,8 @@
 class RateLimiter {
   constructor(limit) {
     this.limit = limit; // Maximum number of concurrent tasks
-    this.running = 0; // Number of tasks currently running
-    this.queue = []; // Task queue (tasks waiting to be processed)
+    this.running = 0;  // Number of tasks currently running
+    this.queue = [];  // Task queue (tasks waiting to be processed)
   }
 
   // Add a task to the rate limiter
@@ -21,12 +21,12 @@ class RateLimiter {
     }
 
     const nextTask = this.queue.shift();
-    this.running++; // Increment running task count
+    this.running++; 
 
     // Execute the task
     nextTask().finally(() => {
-      this.running--; 
-      this.processQueue(); 
+      this.running--;
+      this.processQueue();
     });
   }
 }
@@ -42,8 +42,7 @@ const createTask = (id, time) => {
     });
 };
 
-const rateLimiter = new RateLimiter(2); 
-
+const rateLimiter = new RateLimiter(3);
 
 for (let i = 1; i <= 5; i++) {
   rateLimiter.addTask(createTask(i, 1000)); // Each task takes 1 second

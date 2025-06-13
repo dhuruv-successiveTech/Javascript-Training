@@ -12,7 +12,6 @@ class PromiseBasedTaskQueue {
   // Add task to the queue with priority
   addTask(task, priority = 0) {
     return new Promise((resolve, reject) => {
-      // Add the task to the queue with priority and a function that wraps the promise
       this.queue.push({task : () => task().then(resolve).catch(reject), priority});
 
       // Sort the queue by priority (lower number = higher priority)
@@ -21,30 +20,28 @@ class PromiseBasedTaskQueue {
     });
   }
 
-  // Process tasks in the queue, respecting the concurrency limit
   processQueue() {
     if (this.running >= this.limit || this.queue.length === 0) {
-      return; // If we're at concurrency limit, or no tasks are in the queue
+      return; 
     }
 
-    const nextTask = this.queue.shift();  // Get the next task from the queue (highest priority)
+    const nextTask = this.queue.shift();  // Get highest priority task
     this.running++;  // Increment running task count
 
     nextTask.task() // Execute the task
       .finally(() => {
         this.running--; // Decrement running task count
-        this.processQueue(); // Continue processing the queue if there are more tasks
+        this.processQueue();
       });
   }
 }
 
-// Simulate a task (returns a promise that resolves after a given time)
 const createTask = (id, time) => {
   return () => new Promise((resolve) => {
     console.log(`Task ${id} started`);
     setTimeout(() => {
       console.log(`Task ${id} finished after ${time}ms`);
-      resolve(`Task ${id} completed successfully after ${time}ms`);
+      resolve();
     }, time);
   });
 };
