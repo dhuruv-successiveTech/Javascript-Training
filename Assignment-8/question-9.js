@@ -3,8 +3,8 @@
 // console.log(person.name);
 
 // Ans.
-// In above code we will get an error as object is not created from the constructor funciton
-// So, we need to use new keyword to create an object of constructor function
+/* In above code we will get an error as object is not created from the constructor funciton
+ So, we need to use new keyword to create an object of constructor function */
 
 // Modified Code
 

@@ -4,7 +4,6 @@
 // }
 
 // Ans. 
-
 /* The loop will run 5 time, it will give undefined for the 5th index. So it can be resolved by setting 
 the condition as i<myArray.length
 */

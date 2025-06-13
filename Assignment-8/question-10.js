@@ -6,7 +6,6 @@
 // });
 
 // Ans.
-
 // Above code is working perfectly, but we can do this question using arrow function
 
 // Modified Code

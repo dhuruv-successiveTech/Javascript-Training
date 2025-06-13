@@ -13,8 +13,8 @@
 // );
 
 // Ans.
-// Above code should handle errors using a catch block, so we can add a catch block in order to handle the errors properly.
-// Also we can do this question using arrow function.
+/* Above code should handle errors using a catch block, so we can add a catch block in order to handle the errors properly.
+ Also we can do this question using arrow function. */
 
 // Modified Code
 

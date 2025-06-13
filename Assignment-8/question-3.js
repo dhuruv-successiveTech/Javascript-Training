@@ -4,7 +4,6 @@
 // },
 
 // Ans . 
-
 // There is no error in above code, but we can write the above code in a more better way
 
 // Modified Code 

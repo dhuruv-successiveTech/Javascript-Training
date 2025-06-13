@@ -4,7 +4,6 @@
 // }
 
 // Ans. 
-
 // We should use bracket notation to access the properties of the object. 
 
 // Modified Code 
