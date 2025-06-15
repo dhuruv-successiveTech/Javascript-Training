@@ -16,7 +16,8 @@ class PromiseBasedTaskQueue {
 
       // Sort the queue by priority (lower number = higher priority)
       this.queue.sort((a, b) => a.priority - b.priority);
-      this.processQueue(); // Start processing tasks if possible
+      // after full queueing tasks are picked 
+      setTimeout(()=>this.processQueue(),0) // Start processing tasks if possible
     });
   }
 
@@ -47,7 +48,7 @@ const createTask = (id, time) => {
 };
 
 
-const queue = new PromiseBasedTaskQueue(2);
+const queue = new PromiseBasedTaskQueue(3);
 
 // Add tasks to the queue with different priorities
 queue.addTask(createTask(1, 2000), 1);  // Task 1 with priority 1
